@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/star"
+        app:title="Credit Debit"
+
+        android:id="@+id/cd_toolbar"
+        app:titleTextColor="#ffff"
+
+        />
+    <LinearLayout
+        android:id="@+id/data_all"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="3"
+
+        android:background="@color/star"
+        android:layout_below="@id/cd_toolbar"
+        >
+        <LinearLayout
+
+       android:layout_weight="1"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+      >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Due"
+            android:textColor="#FFC107"
+            android:padding="5dp"
+             android:textStyle="bold"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2,000"
+            android:drawableLeft="@drawable/dot"
+            android:textColor="#FFC107"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:drawablePadding="5dp"
+           android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="90dp"
+            android:background="#ffff"
+            />
+        <LinearLayout
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Due"
+                android:textColor="#FFC107"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="69,000"
+
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="90dp"
+            android:background="#ffff"
+            />
+
+
+        <LinearLayout
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Recevived"
+                android:textColor="#FFC107"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="67,000"
+                android:drawableLeft="@drawable/dot"
+                android:drawableTint="#0EDD2C"
+                android:textColor="#FFC107"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+
+        android:layout_marginTop="-20dp"
+        android:layout_below="@+id/data_all">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#ffff"
+            android:padding="5dp"
+            android:weightSum="3"
+            >
+            <Button
+                android:id="@+id/btn_all"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                   android:textColor="#000"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_height="wrap_content"
+                android:text="All"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="90dp"
+                android:background="#2196F3"
+                />
+
+            <Button
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_marginLeft="15dp"
+                android:textColor="#0EEA5E"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:text="Recevived"
+                />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="90dp"
+                android:background="#2196F3"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+              android:layout_marginLeft="15dp"
+                android:textColor="#000"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_height="wrap_content"
+                android:text="Due"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+      <com.google.android.material.imageview.ShapeableImageView
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:src="@mipmap/face_1"
+          app:strokeWidth="2dp"
+          android:layout_centerInParent="true"
+          android:padding="5dp"
+          app:strokeColor="#0CE8C7"
+          app:shapeAppearanceOverlay="@style/shapeimage"
+
+
+          />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cd_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cardview"
+        android:layout_margin="5dp"
+        android:layout_marginTop="-62dp"
+        android:layout_marginBottom="5dp" />
+
+
+</RelativeLayout>
